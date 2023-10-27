@@ -64,7 +64,6 @@ class MainActivity : ComponentActivity() {
 }
 
 
-
 @Composable
 fun TampilLayout(
     modifier: Modifier = Modifier
@@ -82,6 +81,7 @@ fun TampilLayout(
         }
     }
 }
+
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -137,9 +137,10 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
         onClick = {
             cobaViewModel.insertData(textNama, textTlp, dataForm.sex)
         }
+
     ) {
         Text(
-            text = stringResource(R.string.submit),
+            text = stringResource(Submit),
             fontSize = 16.sp
         )
     }
@@ -195,22 +196,22 @@ fun TextHasil (namanya: String, telponnya: String, jenisnya: String, alamatnya: 
             .fillMaxWidth()
     ) {
         Text(
-            text = "Nama : " + namanya,
+            text = "Jenis Kelamin : " + jenisnya,
             modifier = Modifier
                 .padding(horizontal = 10.dp, vertical = 4.dp)
         )
         Text(
-            text = "Telepon : " + telponnya,
-            modifier = Modifier
-                .padding(horizontal = 10.dp, vertical = 5.dp)
-        )
-        Text(
-            text = "Jenis Kelamin : " + jenisnya,
+            text = "Status : " + statusnya,
             modifier = Modifier
                 .padding(horizontal = 10.dp, vertical = 5.dp)
         )
         Text(
             text = "Alamat : " + alamatnya,
+            modifier = Modifier
+                .padding(horizontal = 10.dp, vertical = 5.dp)
+        )
+        Text(
+            text = "Email : " + emailnya,
             modifier = Modifier
                 .padding(horizontal = 10.dp, vertical = 5.dp)
         )
