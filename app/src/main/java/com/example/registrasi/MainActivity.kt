@@ -64,6 +64,7 @@ class MainActivity : ComponentActivity() {
 }
 
 
+
 @Composable
 fun TampilLayout(
     modifier: Modifier = Modifier
@@ -101,7 +102,7 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
         singleLine = true,
         shape = MaterialTheme.shapes.large,
         modifier = Modifier.fillMaxWidth(),
-        label = {Text(text = "Nama Lengkap") },
+        label = {Text(text = "Username") },
         onValueChange = {
             textNama = it
         }
@@ -112,7 +113,7 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
         shape = MaterialTheme.shapes.large,
         modifier = Modifier.fillMaxWidth(),
-        label = { Text(text = "Telpon") },
+        label = { Text(text = "Telepon") },
         onValueChange = {
             textTlp = it
         }
@@ -122,7 +123,7 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
         singleLine = true,
         shape = MaterialTheme.shapes.large,
         modifier = Modifier.fillMaxWidth(),
-        label = {Text(text = "Alamat")},
+        label = {Text(text = "Email")},
         onValueChange = {
             textAlmt = it
         }
@@ -147,7 +148,7 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
         namanya = cobaViewModel.namaUsr,
         telponnya = cobaViewModel.noTlp,
         jenisnya = cobaViewModel.jenisKl,
-        alamatnya = cobaViewModel.alamat,
+        alamatnya = cobaViewModel.email,
     )
 }
 
