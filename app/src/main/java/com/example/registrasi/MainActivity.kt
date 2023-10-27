@@ -83,7 +83,6 @@ fun TampilLayout(
 }
 
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
@@ -140,7 +139,7 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
 
     ) {
         Text(
-            text = stringResource(Submit),
+            text = stringResource(Register),
             fontSize = 16.sp
         )
     }
@@ -185,6 +184,8 @@ fun SelectJK(
 
     }
 }
+
+
 
 @Composable
 fun TextHasil (namanya: String, telponnya: String, jenisnya: String, alamatnya: String) {
